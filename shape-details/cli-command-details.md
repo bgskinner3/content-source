@@ -19,6 +19,41 @@ Once published, the identifier should remain stable because external systems may
 
 ---
 
+# shortDescription
+
+## ROLE:
+Stores a concise summary intended for compact CLI displays, tables, and quick-reference views.
+
+## STRATEGY:
+Provides the primary purpose of a command in a single readable sentence.
+
+## INVARIANT:
+Short descriptions should explain the command's intent.
+
+They should:
+- remain brief and scannable
+- avoid repeating the full description
+- avoid including the executable command payload
+- avoid implementation details
+- describe the user-facing value of the command
+
+## FORMAT:
+Recommended length: 5-10 words.
+
+Examples:
+
+GOOD:
+"Shows directories only in a tree layout."
+"Finds unused project dependencies."
+"Clears the Next.js build cache."
+
+BAD:
+"tree -d displays the directory structure..." ❌
+"Runs the command tree -d..." ❌
+"Uses a recursive filesystem traversal algorithm..." ❌
+
+--
+
 # title
 
 ## ROLE:
