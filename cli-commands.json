@@ -50,7 +50,7 @@
     {
       "id": "C0B28C3A-8DFD-4697-ABD0-91EC24627802",
       "title": "Print Directory Tree Excluding Junk Directories",
-      "command": "tree -I \"node_modules|.git|.next|dist|*.md\"",
+      "command": "tree -I",
       "shortDescription": "Shows a clean tree while ignoring generated folders.",
       "description": "Displays the directory structure while excluding common generated folders, dependency directories, build output, and markdown files to produce a cleaner project overview.",
       "exampleOutput": ".\n├── next.config.mjs\n├── package.json\n├── public\n│   └── images\n│       └── logo.png\n├── src\n│   ├── app\n│   │   ├── layout.tsx\n│   │   └── page.tsx\n│   └── components\n│       └── Button.tsx\n└── tsconfig.json\n\n4 directories, 6 files",
@@ -61,12 +61,12 @@
         "Excludes dependency folders and generated artifacts.",
         "The ignore pattern syntax depends on the installed tree version."
       ],
-      "links": []
+      "links": ["node_modules|.git|.next|dist|*.md"]
     },
     {
       "id": "1841AF49-A01C-4C5B-B3AE-B64643CB34C3",
       "title": "Print Directory Tree with Depth Limit and Exclusions",
-      "command": "tree -L 4 -I \"node_modules|.git|.next|*.md\"",
+      "command": "tree -L 4 -I",
       "shortDescription": "Shows deeper architecture while excluding project noise.",
       "description": "Generates a deeper project structure view while limiting recursion depth and filtering out unnecessary files. Useful for architectural inspection of larger applications.",
       "exampleOutput": ".\n├── next.config.mjs\n├── package.json\n├── public\n│   └── images\n│       └── logo.png\n├── src\n│   ├── app\n│   │   ├── dashboard\n│   │   │   ├── settings\n│   │   │   │   └── page.tsx\n│   │   │   └── page.tsx\n│   │   ├── layout.tsx\n│   │   └── page.tsx\n│   └── components\n│       ├── Button.tsx\n│       └── Card.tsx\n└── tsconfig.json\n\n6 directories, 9 files",
@@ -84,7 +84,7 @@
         "Useful for reviewing application architecture.",
         "Increase or decrease the -L value depending on project size."
       ],
-      "links": []
+      "links": ["node_modules|.git|.next|*.md"]
     },
     {
       "id": "630351F2-1175-4D8A-805D-F877E6B8F94C",
