@@ -1,3 +1,329 @@
 {
-  "id": ""
+  "version": 1,
+  "commands": [
+    {
+      "id": "748BB6CA-30AE-440E-A28D-6F61724AF083",
+      "title": "Print Directory Tree (Directories Only)",
+      "command": "tree -d",
+      "description": "Displays the directory structure of the current location while excluding files. Useful for quickly visualizing project folder organization.",
+      "exampleOutput": ".\n├── src\n│   ├── app\n│   │   ├── api\n│   │   └── dashboard\n│   ├── components\n│   └── styles\n└── public\n    └── images\n\n6 directories",
+      "tags": [
+        "filesystem",
+        "directory",
+        "tree",
+        "navigation",
+        "project-structure"
+      ],
+      "platform": ["macos", "linux", "windows", "wsl"],
+      "shell": "cross-shell",
+      "notes": [
+        "Navigate to the target folder before running this command.",
+        "Requires the tree utility to be installed."
+      ],
+      "links": []
+    },
+    {
+      "id": "98292BF3-5969-4D86-83FF-603ACDB2FE50",
+      "title": "Print Directory Tree with Files (2 Levels Deep)",
+      "command": "tree -L 2",
+      "description": "Displays the current directory structure including files while limiting the output depth to two directory levels. Useful for quickly inspecting a project's top-level organization.",
+      "exampleOutput": ".\n├── README.md\n├── next.config.mjs\n├── package.json\n├── public\n│   ├── favicon.ico\n│   └── images\n├── src\n│   ├── app\n│   ├── components\n│   └── styles\n└── tsconfig.json\n\n4 directories, 5 files",
+      "tags": [
+        "filesystem",
+        "directory",
+        "tree",
+        "project-structure",
+        "inspection"
+      ],
+      "platform": ["macos", "linux", "windows", "wsl"],
+      "shell": "cross-shell",
+      "notes": [
+        "Run from the target project directory.",
+        "The -L flag limits recursion depth."
+      ],
+      "links": []
+    },
+    {
+      "id": "C0B28C3A-8DFD-4697-ABD0-91EC24627802",
+      "title": "Print Directory Tree Excluding Junk Directories",
+      "command": "tree -I \"node_modules|.git|.next|dist|*.md\"",
+      "description": "Displays the directory structure while excluding common generated folders, dependency directories, build output, and markdown files to produce a cleaner project overview.",
+      "exampleOutput": ".\n├── next.config.mjs\n├── package.json\n├── public\n│   └── images\n│       └── logo.png\n├── src\n│   ├── app\n│   │   ├── layout.tsx\n│   │   └── page.tsx\n│   └── components\n│       └── Button.tsx\n└── tsconfig.json\n\n4 directories, 6 files",
+      "tags": ["filesystem", "directory", "tree", "cleanup", "node", "nextjs"],
+      "platform": ["macos", "linux", "windows", "wsl"],
+      "shell": "cross-shell",
+      "notes": [
+        "Excludes dependency folders and generated artifacts.",
+        "The ignore pattern syntax depends on the installed tree version."
+      ],
+      "links": []
+    },
+    {
+      "id": "1841AF49-A01C-4C5B-B3AE-B64643CB34C3",
+      "title": "Print Directory Tree with Depth Limit and Exclusions",
+      "command": "tree -L 4 -I \"node_modules|.git|.next|*.md\"",
+      "description": "Generates a deeper project structure view while limiting recursion depth and filtering out unnecessary files. Useful for architectural inspection of larger applications.",
+      "exampleOutput": ".\n├── next.config.mjs\n├── package.json\n├── public\n│   └── images\n│       └── logo.png\n├── src\n│   ├── app\n│   │   ├── dashboard\n│   │   │   ├── settings\n│   │   │   │   └── page.tsx\n│   │   │   └── page.tsx\n│   │   ├── layout.tsx\n│   │   └── page.tsx\n│   └── components\n│       ├── Button.tsx\n│       └── Card.tsx\n└── tsconfig.json\n\n6 directories, 9 files",
+      "tags": [
+        "filesystem",
+        "directory",
+        "tree",
+        "architecture",
+        "inspection",
+        "project-structure"
+      ],
+      "platform": ["macos", "linux", "windows", "wsl"],
+      "shell": "cross-shell",
+      "notes": [
+        "Useful for reviewing application architecture.",
+        "Increase or decrease the -L value depending on project size."
+      ],
+      "links": []
+    },
+    {
+      "id": "630351F2-1175-4D8A-805D-F877E6B8F94C",
+      "title": "Terminate All Node Processes",
+      "command": "killall node",
+      "description": "Stops all running Node.js processes, including detached development servers, hanging npm scripts, and background Node workers.",
+      "exampleOutput": "user@machine:~/my-nextjs-app$ killall node\n[1]+  Terminated              npm run dev\n[2]+  Terminated              node server.js\nuser@machine:~/my-nextjs-app$",
+      "tags": ["node", "process-management", "cleanup", "development"],
+      "platform": ["macos", "linux"],
+      "shell": "cross-shell",
+      "notes": [
+        "This terminates all Node.js processes on the machine.",
+        "Use caution if multiple Node applications are running."
+      ],
+      "links": []
+    },
+    {
+      "id": "E57508E3-0233-4664-88FF-9C6E6629183E",
+      "title": "Find and Remove node_modules Folders",
+      "command": "npx npkill",
+      "description": "Launches an interactive terminal interface for locating and deleting node_modules directories to recover disk space.",
+      "exampleOutput": "npkill ────────────────────────────────────────────────────────\nScanning for node_modules...\n\n  Path                                      Size       Last Mod\n❯ /Projects/old-react-app/node_modules      412.3 MB   6 months ago\n  /Projects/test-vite-project/node_modules  284.1 MB   2 weeks ago\n  /Projects/sandbox/node_modules            310.5 MB   1 day ago\n\nTotal space that can be freed: 1.01 GB\nSpace freed: 0 B\n ──────────────────────────────────────────────────────────────\n [Space] Delete  [↓/↑] Move  [q] Quit",
+      "tags": ["node", "npm", "cleanup", "disk-space", "node_modules"],
+      "platform": ["macos", "linux", "windows", "wsl"],
+      "shell": "cross-shell",
+      "notes": [
+        "Interactive command requiring user confirmation.",
+        "Deletes selected node_modules directories."
+      ],
+      "links": []
+    },
+    {
+      "id": "C327A199-D109-4501-921B-65373D73B5D5",
+      "title": "Inspect ESLint Configuration",
+      "command": "npm run inspect:linter",
+      "description": "Launches the ESLint configuration inspector interface to visualize active rules, plugins, and flat configuration settings.",
+      "exampleOutput": "",
+      "tags": ["javascript", "eslint", "linting", "configuration", "debugging"],
+      "platform": ["macos", "linux", "windows", "wsl"],
+      "shell": "cross-shell",
+      "notes": [
+        "Requires an inspect:linter script to exist in package.json.",
+        "Opens a browser-based inspection interface."
+      ],
+      "links": []
+    },
+    {
+      "id": "8553B217-889B-4CFB-9497-A866F97430AEC",
+      "title": "Update npm Package Version Ranges",
+      "command": "npx npm-check-updates -u",
+      "description": "Updates package.json dependency versions to the latest available ranges while bypassing current semver constraints.",
+      "exampleOutput": "user@machine:~/my-nextjs-app$ npx npm-check-updates -u\nChecking package.json dependencies...\n[====================] 5/5 100%\n\n next           ^14.1.0  →  ^14.2.5\n react          ^18.2.0  →  ^18.3.1\n react-dom      ^18.2.0  →  ^18.3.1\n eslint         ^8.56.0  →  ^9.8.0\n typescript     ^5.3.3   →  ^5.5.4\n\nUpgraded package.json\nRun npm install to install new versions!",
+      "tags": ["npm", "node", "dependencies", "package-management", "upgrade"],
+      "platform": ["macos", "linux", "windows", "wsl"],
+      "shell": "cross-shell",
+      "notes": [
+        "Updates package.json only.",
+        "Run npm install afterward to install updated versions.",
+        "Review dependency changes before committing."
+      ],
+      "links": []
+    },
+    {
+      "id": "A4F9B8C7-5C92-4C9A-9D6E-4D7E2C8F0A11",
+      "title": "Remove Extraneous npm Packages",
+      "command": "npm prune",
+      "description": "Removes installed packages from node_modules that are not listed in package.json dependencies.",
+      "exampleOutput": "user@machine:~/my-nextjs-app$ npm prune\nremoved 14 packages, changed 1 package in 1.24s\n\naudited 248 packages in 2s\nfound 0 vulnerabilities",
+      "tags": ["npm", "node", "cleanup", "dependencies", "maintenance"],
+      "platform": ["macos", "linux", "windows", "wsl"],
+      "shell": "cross-shell",
+      "notes": [
+        "Useful after removing dependencies from package.json.",
+        "Synchronizes node_modules with declared dependencies."
+      ],
+      "links": []
+    },
+    {
+      "id": "E0A99BC2-DECA-4672-ACA2-1A14342951E1",
+      "title": "Launch Clean Chromium Instance",
+      "command": "npx @rnx-kit/chromium-edge-launcher",
+      "description": "Launches a clean Chromium browser instance from the terminal using a temporary environment without existing cookies, history, or browser extensions interfering with testing.",
+      "exampleOutput": "user@machine:~/my-nextjs-app$ npx @rnx-kit/chromium-edge-launcher\nLaunching clean Chromium instance...\nTarget debugging port opened on: http://127.0.0.1:9222\nPress Ctrl+C to close browser session and clear temporary profile metadata.",
+      "tags": ["chromium", "browser", "debugging", "automation", "testing"],
+      "platform": ["macos", "linux", "windows", "wsl"],
+      "shell": "cross-shell",
+      "notes": [
+        "Creates a clean browser session isolated from the local browser profile.",
+        "Requires Node.js and npm/npx availability."
+      ],
+      "links": []
+    },
+    {
+      "id": "8A00F926-4CB6-4470-AD6B-E182FF6E9413",
+      "title": "Generate Secure Random Hex Key",
+      "command": "openssl rand -hex 16",
+      "description": "Generates a cryptographically secure random hexadecimal string suitable for environment secrets, encryption salts, and application keys.",
+      "exampleOutput": "user@machine:~/my-nextjs-app$ openssl rand -hex 16\ne3b0c44298fc1c149afbf4c8996fb924",
+      "tags": ["security", "openssl", "environment", "secrets", "cryptography"],
+      "platform": ["macos", "linux", "windows", "wsl"],
+      "shell": "cross-shell",
+      "notes": [
+        "Requires OpenSSL to be installed.",
+        "Increase byte length for stronger secrets when required."
+      ],
+      "links": []
+    },
+    {
+      "id": "4F6BAEB2-40A5-4DC6-B357-4192C57F6F4C",
+      "title": "Clear Next.js Build Cache",
+      "command": "rm -rf .next",
+      "description": "Deletes the Next.js generated build directory and local cache files to resolve stale builds, outdated bundles, and development server inconsistencies.",
+      "exampleOutput": "user@machine:~/my-nextjs-app$ rm -rf .next\nuser@machine:~/my-nextjs-app$ npm run dev\n\n> next-app@0.1.0 dev\n> next dev\n\n   ▲ Next.js 15.0.0\n   - Local:        http://localhost:3000\n\n ✓ Starting...\n ✓ Ready in 1400ms",
+      "tags": ["nextjs", "cache", "cleanup", "development", "build"],
+      "platform": ["macos", "linux", "wsl"],
+      "shell": "bash",
+      "notes": [
+        "Deletes generated build output.",
+        "Requires restarting the Next.js development server afterward.",
+        "Command is destructive for the targeted directory."
+      ],
+      "links": []
+    },
+    {
+      "id": "BFC3CDB5-8A78-41B8-82DC-36253FA692CF",
+      "title": "Deep Clean Git Untracked Files",
+      "command": "git clean -fdx",
+      "description": "Removes all untracked files and directories from a Git repository, including ignored files such as build artifacts, dependencies, and local environment files.",
+      "exampleOutput": "user@machine:~/my-nextjs-app$ git clean -fdx\nRemoving .env.local\nRemoving .next/\nRemoving node_modules/\nRemoving out/",
+      "tags": ["git", "cleanup", "repository", "reset", "maintenance"],
+      "platform": ["macos", "linux", "windows", "wsl"],
+      "shell": "cross-shell",
+      "notes": [
+        "Highly destructive command.",
+        "Can delete .env files, node_modules, and generated artifacts.",
+        "Use git clean -fdxn first to preview changes."
+      ],
+      "links": []
+    },
+    {
+      "id": "78ECE79E-D336-40BA-801F-328D6E7C65EA",
+      "title": "Interactively Update npm Dependencies",
+      "command": "npx taze -r",
+      "description": "Runs taze to interactively review and update outdated npm dependencies with selective package upgrade control.",
+      "exampleOutput": "user@machine:~/my-nextjs-app$ npx taze -r\ntaze v0.13.0\n\n  dependencies\n  ❯ next          14.2.0  →  15.0.0   (major)\n    react         18.2.0  →  19.0.0   (major)\n\n  devDependencies\n  ❯ eslint         8.57.0  →  9.12.0   (major)\n\n  [Space] Toggle  [Enter] Select  [A] All  [Q] Abort",
+      "tags": ["npm", "dependencies", "updates", "maintenance", "monorepo"],
+      "platform": ["macos", "linux", "windows", "wsl"],
+      "shell": "cross-shell",
+      "notes": [
+        "Interactive terminal application.",
+        "Review major version updates carefully."
+      ],
+      "links": []
+    },
+    {
+      "id": "DDE59272-100F-4FF7-A4D7-2D9D2F8F5DA9",
+      "title": "Find Unused and Missing Dependencies",
+      "command": "npx depcheck",
+      "description": "Analyzes a project to identify unused dependencies and packages referenced in code but missing from package.json.",
+      "exampleOutput": "user@machine:~/my-nextjs-app$ npx depcheck\nUnused dependencies\n* lodash\n* dotenv\nMissing dependencies\n* lucide-react (used in src/components/Button.tsx)",
+      "tags": ["npm", "dependencies", "cleanup", "analysis", "javascript"],
+      "platform": ["macos", "linux", "windows", "wsl"],
+      "shell": "cross-shell",
+      "notes": [
+        "Useful before production releases.",
+        "May report false positives for dynamically loaded dependencies."
+      ],
+      "links": []
+    },
+    {
+      "id": "D0F2BD17-0282-4811-985B-A8CF6BCA382A",
+      "title": "Modern Directory Tree with eza",
+      "command": "eza --tree --level=2",
+      "description": "Uses eza to display a modern directory tree with file icons, colors, and enhanced filesystem visualization.",
+      "exampleOutput": "user@machine:~/my-nextjs-app$ eza --tree --level=2\n.\n├── 📄 README.md\n├── ⚙️ next.config.mjs\n├── 📦 package.json\n├── 📂 public\n│   ├── 🖼️ favicon.ico\n│   └── 📂 images\n├── 📂 src\n│   ├── 📂 app\n│   ├── 📂 components\n│   └── 📂 styles\n└── ⚙️ tsconfig.json",
+      "tags": ["filesystem", "tree", "terminal", "visualization", "eza"],
+      "platform": ["macos", "linux", "wsl"],
+      "shell": "cross-shell",
+      "notes": [
+        "Requires eza to be installed.",
+        "Modern alternative to tree with additional visual features."
+      ],
+      "links": []
+    },
+    {
+      "id": "F731E843-AE6B-4541-A7C6-AB799E915DBC",
+      "title": "Search Project Files with ripgrep",
+      "command": "rg \"search_term\"",
+      "description": "Searches text across an entire project directory using ripgrep, providing extremely fast results while respecting .gitignore exclusions.",
+      "exampleOutput": "user@machine:~/my-nextjs-app$ rg \"useAuth\"\nsrc/components/Navbar.tsx\n4:import { useAuth } from '@/hooks/useAuth';\n12:  const { user, logout } = useAuth();\n\nsrc/hooks/useAuth.tsx",
+      "tags": ["search", "filesystem", "code", "ripgrep", "development"],
+      "platform": ["macos", "linux", "windows", "wsl"],
+      "shell": "cross-shell",
+      "notes": [
+        "Automatically respects .gitignore files.",
+        "Faster alternative to grep for source code searching.",
+        "Requires ripgrep to be installed."
+      ],
+      "links": []
+    },
+    {
+      "id": "E999945A-BE5C-4E02-BDF2-6B292601E9BA",
+      "title": "Analyze Disk Usage Interactively",
+      "command": "npx gdu",
+      "description": "Launches an interactive terminal disk usage analyzer for identifying large folders, caches, and hidden storage consumers.",
+      "exampleOutput": "gdu ~ ──────────────────────────────────────────────────────────\nTotal: 42.5 GiB [██████████████████████████████████████████████]\n───────────────────────────────────────────────────────────────\n  18.4 GiB [█████████████████                 ] /Library\n  12.1 GiB [███████████                       ] /Projects\n   8.2 GiB [███████                           ] /Downloads\n   2.3 GiB [██                                ] /Pictures\n   1.5 GiB [█                                 ] /.npm\n\n [↑] Up [↓] Down [Enter] Open [q] Quit [d] Delete",
+      "tags": ["disk", "storage", "cleanup", "terminal", "filesystem"],
+      "platform": ["macos", "linux", "windows", "wsl"],
+      "shell": "cross-shell",
+      "notes": [
+        "Interactive disk explorer.",
+        "Useful when cleanup tools like npkill are not enough.",
+        "Requires gdu availability."
+      ],
+      "links": []
+    },
+    {
+      "id": "43E6FEF1-340F-4F56-8492-9DABC7ED11FA",
+      "title": "Inspect Process Using Network Port",
+      "command": "lsof -i :3000",
+      "description": "Displays processes currently listening on a specific network port, including process IDs and application details.",
+      "exampleOutput": "user@machine:~/my-nextjs-app$ lsof -i :3000\nCOMMAND   PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME\nnode    84321 user   23u  IPv6  0x1234      0t0  TCP *:3000 (LISTEN)",
+      "tags": ["network", "ports", "process", "debugging", "node"],
+      "platform": ["macos", "linux", "wsl"],
+      "shell": "bash",
+      "notes": [
+        "Useful for finding processes blocking development ports.",
+        "Combine with kill command to terminate identified processes."
+      ],
+      "links": []
+    },
+    {
+      "id": "9D6F0B8A-71B9-4A7C-8D4E-20A5F0D1C931",
+      "title": "Generate Multiple UUID Values",
+      "command": "for i in {1..5}; do uuidgen; done",
+      "description": "Runs a shell loop that generates multiple UUID values using the system uuidgen utility.",
+      "exampleOutput": "user@machine:~$ for i in {1..5}; do uuidgen; done\n6e67cf3d-fa3e-46a4-bb23-fa5da2a98f1a\n30335e23-28f0-4660-8f96-3a7cbef95393\nd7d2427a-5f04-4c6e-b34e-52f1908bf41a\n837ef390-349c-482a-a9e9-74d110da2df4\n1e791b8d-29cb-4be8-8db9-8b851ad5ccbe",
+      "tags": ["uuid", "generator", "shell", "automation", "database"],
+      "platform": ["macos", "linux"],
+      "shell": "bash",
+      "notes": [
+        "Change the loop number to generate more or fewer UUID values.",
+        "Requires uuidgen availability on the host system."
+      ],
+      "links": []
+    }
+  ]
 }
