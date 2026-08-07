@@ -49,9 +49,16 @@
     "items": [
       {
         "id": "EACCF164-3B1D-4F4B-8001-0DB3BACE76DA",
-        "text": "Workspace",
+        "text": "Daily Prep",
         "href": "/greenroom/dailyPrep",
         "iconName": "tools-solid",
+        "active": true
+      },
+      {
+        "id": "CA4EB79C-8087-447B-8942-376DE329E47A",
+        "text": "Study",
+        "href": "/greenroom/cards",
+        "iconName": "open-book",
         "active": true
       }
     ]
