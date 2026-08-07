@@ -1,0 +1,59 @@
+[
+  {
+    "label": "Control",
+    "items": [
+      {
+        "id": "9710A19E-1461-4601-AD5D-F3D18F061516",
+        "text": "System Health",
+        "href": "/greenroom/system",
+        "iconName": "activity",
+        "active": true
+      },
+      {
+        "id": "9579AAE6-9BA6-483A-A17F-D298725F1F2F",
+        "text": "Feature Flags",
+        "href": "/greenroom/features",
+        "iconName": "medal-star",
+        "active": true
+      },
+      {
+        "id": "931DA1A4-608A-4C30-A810-EAB7A90094BB",
+        "text": "Analytics",
+        "href": "/greenroom/analytics",
+        "iconName": "up-trend-graph",
+        "active": true
+      }
+    ]
+  },
+  {
+    "label": "Operations",
+    "items": [
+      {
+        "id": "AB4A8B38-E150-4797-A87A-1C1FBEB47D14",
+        "text": "Agents",
+        "href": "/greenroom/agents",
+        "iconName": "safe-shield",
+        "active": true
+      },
+      {
+        "id": "F38C89B5-66C7-4797-8724-0ACEA3BFE2B3",
+        "text": "Development",
+        "href": "/greenroom/development",
+        "iconName": "cli-solid",
+        "active": true
+      }
+    ]
+  },
+  {
+    "label": "Personal",
+    "items": [
+      {
+        "id": "EACCF164-3B1D-4F4B-8001-0DB3BACE76DA",
+        "text": "Workspace",
+        "href": "/greenroom/workspace",
+        "iconName": "tools-solid",
+        "active": true
+      }
+    ]
+  }
+]
