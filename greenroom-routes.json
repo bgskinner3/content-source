@@ -3,17 +3,17 @@
     "label": "Control",
     "items": [
       {
+        "id": "9579AAE6-9BA6-483A-A17F-D298725F1F2F",
+        "text": "Feature Flags",
+        "href": "/greenroom/flagControl",
+        "iconName": "flag",
+        "active": true
+      },
+      {
         "id": "9710A19E-1461-4601-AD5D-F3D18F061516",
         "text": "Page Control",
         "href": "/greenroom/control/pages",
         "iconName": "activity",
-        "active": true
-      },
-      {
-        "id": "9579AAE6-9BA6-483A-A17F-D298725F1F2F",
-        "text": "Feature Flags",
-        "href": "/greenroom/features",
-        "iconName": "medal-star",
         "active": true
       },
       {
