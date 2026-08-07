@@ -4,8 +4,8 @@
     "items": [
       {
         "id": "9710A19E-1461-4601-AD5D-F3D18F061516",
-        "text": "System Health",
-        "href": "/greenroom/system",
+        "text": "Page Control",
+        "href": "/greenroom/control/pages",
         "iconName": "activity",
         "active": true
       },
