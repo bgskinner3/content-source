@@ -14,14 +14,14 @@
         "text": "Page Control",
         "href": "/greenroom/control/pages",
         "iconName": "activity",
-        "active": true
+        "active": false
       },
       {
         "id": "931DA1A4-608A-4C30-A810-EAB7A90094BB",
         "text": "Analytics",
         "href": "/greenroom/analytics",
         "iconName": "up-trend-graph",
-        "active": true
+        "active": false
       }
     ]
   },
@@ -33,14 +33,14 @@
         "text": "Agents",
         "href": "/greenroom/agents",
         "iconName": "safe-shield",
-        "active": true
+        "active": false
       },
       {
         "id": "F38C89B5-66C7-4797-8724-0ACEA3BFE2B3",
         "text": "Development",
         "href": "/greenroom/development",
         "iconName": "cli-solid",
-        "active": true
+        "active": false
       }
     ]
   },
@@ -52,12 +52,12 @@
         "text": "Daily Prep",
         "href": "/greenroom/dailyPrep",
         "iconName": "tools-solid",
-        "active": true
+        "active": false
       },
       {
         "id": "CA4EB79C-8087-447B-8942-376DE329E47A",
         "text": "Study",
-        "href": "/greenroom/cards",
+        "href": "/greenroom/study",
         "iconName": "open-book",
         "active": true
       }
