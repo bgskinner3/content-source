@@ -56,8 +56,8 @@
       },
       {
         "id": "CA4EB79C-8087-447B-8942-376DE329E47A",
-        "text": "Study",
-        "href": "/greenroom/study",
+        "text": "Workspace",
+        "href": "/greenroom/workspace",
         "iconName": "open-book",
         "active": true
       }
