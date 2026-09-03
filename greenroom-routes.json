@@ -36,6 +36,13 @@
         "active": false
       },
       {
+        "id": "1CA718CC-A577-4356-8F44-B73BF66844CD",
+        "text": "Audio Lab",
+        "href": "/greenroom/audioLab",
+        "iconName": "mic-on",
+        "active": true
+      },
+      {
         "id": "F38C89B5-66C7-4797-8724-0ACEA3BFE2B3",
         "text": "Development",
         "href": "/greenroom/development",
