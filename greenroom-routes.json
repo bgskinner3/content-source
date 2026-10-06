@@ -30,10 +30,10 @@
     "items": [
       {
         "id": "AB4A8B38-E150-4797-A87A-1C1FBEB47D14",
-        "text": "Agents",
-        "href": "/greenroom/agents",
-        "iconName": "safe-shield",
-        "active": false
+        "text": "Component Health",
+        "href": "/greenroom/componentHealth",
+        "iconName": "storybook",
+        "active": true
       },
       {
         "id": "1CA718CC-A577-4356-8F44-B73BF66844CD",
